@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://cr24lpvw0ohbs"]
+
+[ext_resource type="Texture2D" uid="uid://b1d087p2oqi8r" path="res://icon.svg" id="1_6udbq"]
+[ext_resource type="Script" uid="uid://t38mqo524jm1" path="res://scripts/character/Movement.cs" id="2_8ypt3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ypt3"]
+size = Vector2(1000, 167.5)
+
+[node name="Control" type="Control" unique_id=152792922]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 259.0
+offset_top = 24.0
+offset_right = 259.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BoxContainer" type="BoxContainer" parent="." unique_id=1149588017]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Node2D" type="Node2D" parent="BoxContainer" unique_id=136116736]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BoxContainer/Node2D" unique_id=1665952568]
+position = Vector2(-1280, -720)
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="BoxContainer/Node2D/StaticBody2D" unique_id=1783451608]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 781.0
+offset_top = 807.0
+offset_right = 1780.9999
+offset_bottom = 1807.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxContainer/Node2D/StaticBody2D" unique_id=15156896]
+position = Vector2(1282, 887.75)
+shape = SubResource("RectangleShape2D_8ypt3")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1396439490]
+position = Vector2(1280, 720)
+script = ExtResource("2_8ypt3")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=432282884]
+texture = ExtResource("1_6udbq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D" unique_id=109394831]
+polygon = PackedVector2Array(59, -64, -58, -64, -63.8, -58, -64, 57.800003, -59, 62.800003, -59, 64, 57.6, 64, 63.9, 57, 64, -57.8, 59, -62.8)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=958961077]

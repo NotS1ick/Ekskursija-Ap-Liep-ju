@@ -1,0 +1,11 @@
+[gd_resource type="Theme" format=3 uid="uid://byqcf7nj1rw75"]
+
+[ext_resource type="FontFile" uid="uid://ds2xk2d7nr73y" path="res://fonts/Jersey10-Regular.ttf" id="1_x1aed"]
+
+[resource]
+default_font = ExtResource("1_x1aed")
+default_font_size = 128
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+RichTextLabel/constants/outline_size = 0
+RichTextLabel/constants/shadow_offset_y = 0
