@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b0loyp51nr538"
-path="res://.godot/imported/PixelifySans-VariableFont_wght.ttf-b4586e9d511f20f639f726e445631446.fontdata"
+uid="uid://bih8f17r3jdkq"
+path="res://.godot/imported/Clippy_wght.ttf-2bad35dde66b0778c67b3ca9994e1006.fontdata"
 
 [deps]
 
-source_file="res://fonts/PixelifySans-VariableFont_wght.ttf"
-dest_files=["res://.godot/imported/PixelifySans-VariableFont_wght.ttf-b4586e9d511f20f639f726e445631446.fontdata"]
+source_file="res://fonts/Clippy_wght.ttf"
+dest_files=["res://.godot/imported/Clippy_wght.ttf-2bad35dde66b0778c67b3ca9994e1006.fontdata"]
 
 [params]
 
@@ -16,9 +16,9 @@ Rendering=null
 antialiasing=1
 generate_mipmaps=true
 disable_embedded_bitmaps=true
-multichannel_signed_distance_field=false
-msdf_pixel_range=2
-msdf_size=1
+multichannel_signed_distance_field=true
+msdf_pixel_range=8
+msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
 modulate_color_glyphs=false
@@ -34,7 +34,11 @@ preload=[{
 "chars": [],
 "glyphs": [],
 "name": "New Configuration",
-"size": Vector2i(16, 0)
+"size": Vector2i(16, 0),
+&"variation_embolden": 0.0,
+&"variation_opentype": {
+2003265652: 400
+}
 }]
 language_support={}
 script_support={}

@@ -5,6 +5,8 @@
 [ext_resource type="Theme" uid="uid://byqcf7nj1rw75" path="res://themes/title.tres" id="2_xg5f5"]
 [ext_resource type="FontFile" uid="uid://b0loyp51nr538" path="res://fonts/PixelifySans-VariableFont_wght.ttf" id="3_5foms"]
 [ext_resource type="Texture2D" uid="uid://bmxn3p2vfxs2w" path="res://sprites/Keyboard Extras.png" id="3_wgwa1"]
+[ext_resource type="FontFile" uid="uid://ds2xk2d7nr73y" path="res://fonts/Jersey10-Regular.ttf" id="6_ocfc5"]
+[ext_resource type="Texture2D" uid="uid://b1os2wpjhlnbd" path="res://sprites/roecket.png" id="7_ocfc5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wgwa1"]
 bg_color = Color(1, 1, 1, 1)
@@ -82,3 +84,32 @@ scale = Vector2(2.7708318, 2.7708328)
 texture = ExtResource("3_wgwa1")
 region_enabled = true
 region_rect = Rect2(37.79088, 0.044397354, 19.755913, 15.408086)
+
+[node name="BoxContainer" type="BoxContainer" parent="." unique_id=575612268]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -245.31995
+offset_right = 354.6803
+offset_bottom = 157.0
+grow_horizontal = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BoxContainer" unique_id=333327708]
+custom_minimum_size = Vector2(0, 157)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/normal_font = ExtResource("6_ocfc5")
+theme_override_font_sizes/normal_font_size = 64
+text = "Autori & Avoti"
+fit_content = true
+shortcut_keys_enabled = false
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="Sprite2D" type="Sprite2D" parent="BoxContainer" unique_id=225263199]
+position = Vector2(72.36499, 80)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_ocfc5")

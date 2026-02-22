@@ -1,0 +1,15 @@
+[gd_resource type="Theme" format=3 uid="uid://bg68ogyigmbhs"]
+
+[ext_resource type="FontFile" uid="uid://b0loyp51nr538" path="res://fonts/PixelifySans-VariableFont_wght.ttf" id="1_ukyra"]
+[ext_resource type="FontFile" uid="uid://bih8f17r3jdkq" path="res://fonts/Clippy_wght.ttf" id="2_ik5al"]
+
+[resource]
+default_font = ExtResource("2_ik5al")
+default_font_size = 22
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+RichTextLabel/constants/line_separation = 0
+RichTextLabel/constants/outline_size = 0
+RichTextLabel/constants/paragraph_separation = 1
+RichTextLabel/font_sizes/normal_font_size = 22
+RichTextLabel/fonts/normal_font = ExtResource("1_ukyra")

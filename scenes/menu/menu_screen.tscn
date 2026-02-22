@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d2tepls5hsooh" path="res://sprites/image 5.png" id="1_ewyt1"]
 [ext_resource type="FontFile" uid="uid://ds2xk2d7nr73y" path="res://fonts/Jersey10-Regular.ttf" id="2_7oy8m"]
-[ext_resource type="Texture2D" uid="uid://cp1vmwbjft50s" path="res://sprites/Sprite-0002 2.png" id="3_o5hkg"]
+[ext_resource type="Texture2D" uid="uid://chijtjdbu026f" path="res://sprites/Sprite-0002.png" id="3_ewyt1"]
 [ext_resource type="Theme" uid="uid://dco13t3nvwkhd" path="res://themes/button.tres" id="4_pgfyt"]
 [ext_resource type="Script" uid="uid://dfdfs85r6nunl" path="res://scripts/menu/Button.cs" id="5_iav0t"]
 
@@ -167,8 +167,9 @@ offset_bottom = 40.0
 
 [node name="Sprite2D2" type="Sprite2D" parent="Menu/Node2D" unique_id=731960765]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(801, 769)
-texture = ExtResource("3_o5hkg")
+position = Vector2(800, 760)
+scale = Vector2(1.5, 1.55)
+texture = ExtResource("3_ewyt1")
 centered = false
 
 [node name="BoxContainer" type="BoxContainer" parent="Menu/Node2D" unique_id=971967153]
