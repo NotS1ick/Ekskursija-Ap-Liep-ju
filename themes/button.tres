@@ -1,24 +1,16 @@
-[gd_resource type="Theme" format=3 uid="uid://dco13t3nvwkhd"]
+[gd_resource type="Theme" format=3 uid="uid://x068ww5u7oqj"]
 
-[ext_resource type="FontFile" uid="uid://b0loyp51nr538" path="res://fonts/PixelifySans-VariableFont_wght.ttf" id="1_dpjbf"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dpjbf"]
-bg_color = Color(0.65882355, 0.8745098, 0.5568628, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8pfl"]
-bg_color = Color(0.65882355, 0.8745098, 0.5568628, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnr13"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+[ext_resource type="FontFile" uid="uid://cjhxk7uqxrm76" path="res://fonts/PixelifySans-VariableFont_wght.ttf" id="1_dpjbf"]
 
 [resource]
 default_font = ExtResource("1_dpjbf")
-default_font_size = 100
-Button/colors/font_color = Color(0, 0, 0, 0.6)
-Button/colors/font_focus_color = Color(0, 0, 0, 1)
-Button/colors/font_hover_color = Color(0, 0, 0, 1)
-Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
-Button/styles/focus = SubResource("StyleBoxFlat_dpjbf")
-Button/styles/hover = SubResource("StyleBoxFlat_s8pfl")
-Button/styles/normal = SubResource("StyleBoxFlat_xnr13")
-Button/styles/pressed = null
+default_font_size = 64
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 0)
+RichTextLabel/constants/line_separation = 0
+RichTextLabel/constants/outline_size = 0
+RichTextLabel/constants/paragraph_separation = 0
+RichTextLabel/constants/shadow_offset_x = 1
+RichTextLabel/constants/shadow_offset_y = 1
+RichTextLabel/constants/shadow_outline_size = 1

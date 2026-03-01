@@ -5,11 +5,11 @@
 
 [resource]
 default_font = ExtResource("2_ik5al")
-default_font_size = 22
+default_font_size = 64
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
 RichTextLabel/constants/line_separation = 0
 RichTextLabel/constants/outline_size = 0
 RichTextLabel/constants/paragraph_separation = 1
-RichTextLabel/font_sizes/normal_font_size = 22
+RichTextLabel/font_sizes/normal_font_size = 32
 RichTextLabel/fonts/normal_font = ExtResource("1_ukyra")

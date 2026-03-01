@@ -1,0 +1,222 @@
+[gd_scene format=3 uid="uid://tmqhkosf7bg0"]
+
+[ext_resource type="Texture2D" uid="uid://c28rkn0y0v1ko" path="res://sprites/ui/about_us/image 10.png" id="1_tpyw5"]
+[ext_resource type="Texture2D" uid="uid://nbncimw7jxlc" path="res://sprites/ui/about_us/frame 1.png" id="2_ewoma"]
+[ext_resource type="Texture2D" uid="uid://ceayol1dmgmsj" path="res://sprites/ui/keyboard_hints/Keyboard Extras.png" id="3_nwcm6"]
+[ext_resource type="Theme" uid="uid://x068ww5u7oqj" path="res://themes/button.tres" id="3_v7dfj"]
+[ext_resource type="Texture2D" uid="uid://dma1g4vekcu5m" path="res://sprites/ui/about_us/frame 1_Mareks.png" id="4_bntfw"]
+[ext_resource type="Script" uid="uid://cw7mu2b475d1i" path="res://scripts/ui/about_us/AboutUsAuthorSources.cs" id="5_script"]
+[ext_resource type="Texture2D" uid="uid://cdrtihvt0pgqw" path="res://sprites/ui/about_us/frame 1_Madars.png" id="6_j4paf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwcm6"]
+atlas = ExtResource("3_nwcm6")
+region = Rect2(39, 2, 18, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wto2s"]
+atlas = ExtResource("3_nwcm6")
+region = Rect2(98, 18, 28, 12)
+
+[node name="AboutUsAuthorSources" type="Control" unique_id=1956421177]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_script")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1718706566]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_tpyw5")
+
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=1781341348]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.97
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.12011719
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2" unique_id=107458682]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 25
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2/HBoxContainer" unique_id=1410501849]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer2/HBoxContainer/HBoxContainer" unique_id=1422292299]
+layout_mode = 2
+texture = SubResource("AtlasTexture_nwcm6")
+expand_mode = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer2/HBoxContainer/HBoxContainer" unique_id=1404291774]
+custom_minimum_size = Vector2(142.505, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_v7dfj")
+theme_override_font_sizes/normal_font_size = 32
+text = "Atpakaļ"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer2/HBoxContainer" unique_id=828786736]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer2/HBoxContainer/HBoxContainer2" unique_id=1135980116]
+layout_mode = 2
+texture = SubResource("AtlasTexture_wto2s")
+expand_mode = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer2/HBoxContainer/HBoxContainer2" unique_id=754437472]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_v7dfj")
+theme_override_font_sizes/normal_font_size = 32
+text = "Sākt Spēli"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1623089083]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 120
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 120
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer" unique_id=932600483]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ScrollContainer" unique_id=930456835]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 175
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer/MarginContainer" unique_id=1470622563]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_constants/separation = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=226823825]
+layout_mode = 2
+theme_override_constants/separation = 90
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1928997971]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1994239719]
+custom_minimum_size = Vector2(640, 820)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_ewoma")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=941502634]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer" unique_id=152089976]
+layout_mode = 2
+theme = ExtResource("3_v7dfj")
+text = "Ričards Šēns
+"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer" unique_id=33007515]
+layout_mode = 2
+theme = ExtResource("3_v7dfj")
+theme_override_font_sizes/normal_font_size = 32
+text = "Artist | Prompt Engineer"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=791375123]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3" unique_id=1143085619]
+custom_minimum_size = Vector2(640, 820)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_bntfw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3" unique_id=514616714]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3/VBoxContainer" unique_id=84832459]
+layout_mode = 2
+theme = ExtResource("3_v7dfj")
+theme_override_font_sizes/normal_font_size = 64
+text = "Mareks Lovniks"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3/VBoxContainer" unique_id=1588653663]
+layout_mode = 2
+theme = ExtResource("3_v7dfj")
+theme_override_font_sizes/normal_font_size = 32
+text = "Programmer | Project Manager | UI Designer"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=355529891]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1070832684]
+custom_minimum_size = Vector2(640, 820)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("6_j4paf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=839148380]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/VBoxContainer" unique_id=99546426]
+layout_mode = 2
+theme = ExtResource("3_v7dfj")
+text = "Madars Urtāns"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/VBoxContainer" unique_id=1985092555]
+layout_mode = 2
+theme = ExtResource("3_v7dfj")
+theme_override_font_sizes/normal_font_size = 32
+text = "Prompt Engineer | Game Design | Artist | Sound Engineer | UI Designer"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=872041571]
+layout_mode = 2
+theme = ExtResource("3_v7dfj")
+theme_override_font_sizes/normal_font_size = 32
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae purus placerat, consectetur neque sit amet, feugiat arcu. Ut commodo mi nec nisi euismod blandit. Donec porttitor faucibus rhoncus. Sed viverra hendrerit enim, ac malesuada orci egestas et. Mauris elementum lorem nunc, eu mollis sapien euismod at. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras tristique massa nec faucibus ullamcorper. Proin vitae leo eu diam facilisis commodo non et risus. Etiam viverra nisl dui, id vestibulum sapien sollicitudin a. In fringilla, magna scelerisque efficitur sodales, sapien magna hendrerit tellus, sit amet molestie metus metus vel felis. Vivamus in dapibus libero. Donec lacinia tristique quam, ut varius est.
+
+Suspendisse placerat sem id fermentum tempus. Aliquam sed ante sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla justo ligula, feugiat id malesuada quis, sollicitudin ultricies eros. Phasellus malesuada eros pretium tellus ornare, ut fermentum elit volutpat. Nullam ac nunc quis risus commodo accumsan at sed libero. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed at lacus vel nisl malesuada fermentum. Cras lacinia efficitur ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus et mauris ipsum. In nibh ex, accumsan ac velit sit amet, molestie convallis nunc. Etiam urna metus, faucibus id nibh et, imperdiet eleifend metus.
+
+Ut ex elit, accumsan nec sagittis sit amet, molestie eget elit. Nulla in mollis dolor. Etiam pretium egestas quam nec luctus. Morbi arcu ante, congue vitae maximus non, malesuada a dui. Phasellus fermentum scelerisque pulvinar. Phasellus mollis quis nunc faucibus laoreet. Proin tellus felis, laoreet ut justo at, cursus vestibulum est. Phasellus felis sem, ullamcorper sed arcu in, euismod eleifend turpis.
+
+In velit nisl, porta vitae nulla in, faucibus fermentum neque. Donec vitae tincidunt enim. Phasellus fringilla lobortis nisl, nec maximus lectus auctor vitae. Proin mattis in diam sed sagittis. In a diam sit amet elit ultricies commodo. Nullam pulvinar congue ullamcorper. In volutpat risus sit amet vulputate tempus. Nam dignissim odio a odio lacinia ultrices. Vestibulum sed sodales lectus. Nulla finibus luctus diam, quis interdum metus facilisis et. Nulla sollicitudin quam sed placerat ultricies. Nunc leo lorem, rhoncus et mattis nec, sagittis non sem. Sed ligula quam, molestie in fringilla non, sodales in nisl.
+
+Maecenas sed interdum diam. Praesent elit est, iaculis nec consectetur sit amet, porta ac risus. Etiam at orci pretium nibh consectetur egestas et condimentum nibh. Proin eros felis, imperdiet nec augue eleifend, suscipit fermentum nibh. Phasellus urna nisl, euismod quis tortor eget, aliquam elementum metus. Aliquam felis metus, condimentum eu orci rhoncus, dignissim efficitur mauris. Curabitur nisi erat, vulputate eget sagittis vitae, interdum sit amet leo. Nulla non dui ut quam semper placerat. Vivamus commodo vestibulum est tempor dictum. Nulla sit amet sodales neque. Phasellus nec sagittis sapien. Donec elementum tellus quis lorem laoreet euismod. Vivamus aliquet quam in nisi lacinia volutpat. Praesent a ante finibus, iaculis dui nec, cursus ex. "
+fit_content = true

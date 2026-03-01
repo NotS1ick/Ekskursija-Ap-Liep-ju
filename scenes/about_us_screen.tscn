@@ -1,0 +1,183 @@
+[gd_scene format=3 uid="uid://dyxboua8tq78d"]
+
+[ext_resource type="Script" uid="uid://dvjapede5ki2r" path="res://scripts/ui/about_us/AboutUsScreen.cs" id="1_0p4v1"]
+[ext_resource type="Texture2D" uid="uid://dp1actei0smvf" path="res://sprites/ui/title_screen/image 1.png" id="3_20ell"]
+[ext_resource type="FontFile" uid="uid://cjhxk7uqxrm76" path="res://fonts/PixelifySans-VariableFont_wght.ttf" id="4_8jycq"]
+[ext_resource type="Texture2D" uid="uid://dxl3nlqerbwuj" path="res://sprites/ui/about_us/roecket.svg" id="4_ug8bd"]
+[ext_resource type="Theme" uid="uid://chk7bapn4nnkr" path="res://themes/title.tres" id="6_ug8bd"]
+[ext_resource type="Theme" uid="uid://x068ww5u7oqj" path="res://themes/button.tres" id="7_4h2jf"]
+[ext_resource type="Texture2D" uid="uid://ceayol1dmgmsj" path="res://sprites/ui/keyboard_hints/Keyboard Extras.png" id="8_amjf6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4h2jf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8jycq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ug8bd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_amjf6"]
+
+[sub_resource type="Theme" id="Theme_4h2jf"]
+default_font = ExtResource("4_8jycq")
+default_font_size = 64
+Button/colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 0.4)
+Button/colors/font_focus_color = Color(0.9490196, 0.9490196, 0.9490196, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 0.4)
+Button/constants/icon_max_width = 157
+Button/icons/icon = ExtResource("4_ug8bd")
+Button/styles/focus = SubResource("StyleBoxEmpty_4h2jf")
+Button/styles/hover = SubResource("StyleBoxEmpty_8jycq")
+Button/styles/normal = SubResource("StyleBoxEmpty_ug8bd")
+Button/styles/pressed = SubResource("StyleBoxEmpty_amjf6")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amjf6"]
+atlas = ExtResource("8_amjf6")
+region = Rect2(39, 2, 18, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppsot"]
+atlas = ExtResource("8_amjf6")
+region = Rect2(98, 18, 28, 12)
+
+[node name="AboutUsScreen" type="Control" unique_id=680438735]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0p4v1")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1650603949]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_20ell")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1634302802]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_right = 0.8
+anchor_bottom = 1.0
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_bottom = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=808744220]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 186
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1176430549]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_4h2jf")
+theme_override_font_sizes/font_size = 64
+text = "Autori & Avoti"
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer" unique_id=828947167]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/ColorRect" unique_id=1770763976]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 22
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 22
+theme_override_constants/margin_bottom = 64
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ColorRect/MarginContainer" unique_id=1974022830]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer/ColorRect/MarginContainer/VBoxContainer" unique_id=339666445]
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("6_ug8bd")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/normal_font_size = 128
+text = "Noteikumi"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ColorRect/MarginContainer/VBoxContainer" unique_id=988743860]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=711561270]
+layout_mode = 2
+theme = ExtResource("7_4h2jf")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 48
+text = "1. testtestsetestsetestsetsetsetsetsetsetsetsetests
+"
+fit_content = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=1191750242]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.97
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.12011719
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2" unique_id=793388114]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 25
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2/HBoxContainer" unique_id=453952179]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer2/HBoxContainer/HBoxContainer" unique_id=1685281954]
+layout_mode = 2
+texture = SubResource("AtlasTexture_amjf6")
+expand_mode = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer2/HBoxContainer/HBoxContainer" unique_id=325119747]
+custom_minimum_size = Vector2(142.505, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("7_4h2jf")
+theme_override_font_sizes/normal_font_size = 32
+text = "Atpakaļ"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer2/HBoxContainer" unique_id=442608188]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer2/HBoxContainer/HBoxContainer2" unique_id=1369530658]
+layout_mode = 2
+texture = SubResource("AtlasTexture_ppsot")
+expand_mode = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer2/HBoxContainer/HBoxContainer2" unique_id=2051341993]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("7_4h2jf")
+theme_override_font_sizes/normal_font_size = 32
+text = "Sākt Spēli"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

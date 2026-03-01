@@ -4,12 +4,18 @@
 [ext_resource type="Script" uid="uid://t38mqo524jm1" path="res://scripts/character/Movement.cs" id="2_8ypt3"]
 [ext_resource type="Texture2D" uid="uid://bhifeqcwqirwo" path="res://sprites/16x16_Walk-Sheet.png" id="2_056su"]
 [ext_resource type="Texture2D" uid="uid://wkglcy2h2h4y" path="res://sprites/16x16_Idle-Sheet.png" id="3_056su"]
-[ext_resource type="Texture2D" uid="uid://chijtjdbu026f" path="res://sprites/Sprite-0002.png" id="5_8asym"]
+[ext_resource type="Texture2D" uid="uid://dnetro48xuph4" path="res://sprites/house1.png" id="3_w2jaq"]
 [ext_resource type="Script" uid="uid://bx231f84pgf6n" path="res://scripts/clippy/Clippy.cs" id="5_ld7sk"]
+[ext_resource type="Texture2D" uid="uid://h0eury0ckqnt" path="res://sprites/frame12.png" id="6_2dkum"]
+[ext_resource type="Texture2D" uid="uid://dtqicyd1svawm" path="res://sprites/house6.png" id="6_snt78"]
 [ext_resource type="Texture2D" uid="uid://b5njwtqr3qnje" path="res://sprites/image.png" id="7_pryjh"]
 [ext_resource type="Script" uid="uid://bcflp6huvhtlo" path="res://scripts/clippy/TextWriter.cs" id="8_pnc6c"]
 [ext_resource type="Theme" uid="uid://bg68ogyigmbhs" path="res://themes/notification.tres" id="8_xjmfi"]
 [ext_resource type="Texture2D" uid="uid://bmxn3p2vfxs2w" path="res://sprites/Keyboard Extras.png" id="10_2dkum"]
+[ext_resource type="AudioStream" uid="uid://cbcttx5ieax32" path="res://audio/textsound.wav" id="10_7me7j"]
+[ext_resource type="Texture2D" uid="uid://c3q156o6pgh88" path="res://sprites/HOUSE2.png" id="12_msfbn"]
+[ext_resource type="Texture2D" uid="uid://7gbsrhtqf8x2" path="res://sprites/house3.png" id="14_fuou0"]
+[ext_resource type="Texture2D" uid="uid://ch4lsqc7fadt1" path="res://sprites/house5.png" id="15_2w11g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ypt3"]
 size = Vector2(1000, 164.5)
@@ -448,6 +454,31 @@ offset_bottom = 400.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2113099923]
+position = Vector2(248, 374.00003)
+scale = Vector2(2.8265338, 2.8265338)
+texture = ExtResource("12_msfbn")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=263079779]
+position = Vector2(2639.0002, 317)
+scale = Vector2(2.827, 2.827)
+texture = ExtResource("14_fuou0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=69891179]
+position = Vector2(1687.0001, 341)
+scale = Vector2(2.827, 2.827)
+texture = ExtResource("3_w2jaq")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=1078813551]
+position = Vector2(1701.0002, 1253.9999)
+scale = Vector2(2.827, 2.827)
+texture = ExtResource("6_snt78")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=493591358]
+position = Vector2(2851.0002, 1266.0001)
+scale = Vector2(2.827, 2.827)
+texture = ExtResource("15_2w11g")
+
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1396439490]
 position = Vector2(1280, 720)
 script = ExtResource("2_8ypt3")
@@ -483,15 +514,24 @@ position = Vector2(420.8, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/ClippyContainer/Node2D" unique_id=1551860574]
 position = Vector2(-12.8, 240)
-scale = Vector2(1.272, 1e-05)
-texture = ExtResource("5_8asym")
+scale = Vector2(0.82, 1e-05)
+texture = ExtResource("6_2dkum")
+
+[node name="Clippy" type="Sprite2D" parent="CharacterBody2D/ClippyContainer/Node2D/Sprite2D" unique_id=829728381]
+position = Vector2(-518, 4.000061)
+scale = Vector2(0.26644814, 0.2664481)
+texture = ExtResource("7_pryjh")
 
 [node name="TextContainer" type="MarginContainer" parent="CharacterBody2D/ClippyContainer/Node2D/Sprite2D" unique_id=755347172]
 anchors_preset = -1
-anchor_left = -0.28
-anchor_top = -0.3
-anchor_right = 0.42
-anchor_bottom = 0.3
+anchor_left = -0.2
+anchor_top = -0.2
+anchor_right = 0.5
+anchor_bottom = 0.35
+offset_left = -153.79507
+offset_top = -21.07312
+offset_right = -92.19507
+offset_bottom = -21.07312
 script = ExtResource("8_pnc6c")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CharacterBody2D/ClippyContainer/Node2D/Sprite2D/TextContainer" unique_id=1383445786]
@@ -499,30 +539,34 @@ layout_mode = 2
 size_flags_stretch_ratio = 0.0
 theme = ExtResource("8_xjmfi")
 
-[node name="Clippy" type="Sprite2D" parent="CharacterBody2D/ClippyContainer/Node2D/Sprite2D" unique_id=829728381]
-position = Vector2(-240.56607, -2.7026625)
-scale = Vector2(0.20075005, 0.3251653)
-texture = ExtResource("7_pryjh")
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CharacterBody2D/ClippyContainer/Node2D/Sprite2D/TextContainer" unique_id=1612917213]
+stream = ExtResource("10_7me7j")
 
 [node name="Continue" type="CanvasGroup" parent="CharacterBody2D/ClippyContainer/Node2D/Sprite2D" unique_id=534684152]
 visible = false
+position = Vector2(8.49, 0)
 
 [node name="Enter" type="Sprite2D" parent="CharacterBody2D/ClippyContainer/Node2D/Sprite2D/Continue" unique_id=365749883]
-position = Vector2(199.68561, 128.37842)
-scale = Vector2(0.8138831, 1.2908324)
+position = Vector2(417.11975, 112.19501)
+scale = Vector2(2.0759606, 2.169824)
 texture = ExtResource("10_2dkum")
 region_enabled = true
 region_rect = Rect2(97.766624, 17.690695, 28.49961, 12.540113)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CharacterBody2D/ClippyContainer/Node2D/Sprite2D/Continue" unique_id=174764475]
-offset_left = 213.05035
-offset_top = 120.27026
-offset_right = 275.1573
-offset_bottom = 145.94592
+offset_left = 432.97342
+offset_top = 87.80492
+offset_right = 590.67944
+offset_bottom = 130.55792
 theme = ExtResource("8_xjmfi")
-theme_override_font_sizes/normal_font_size = 14
+theme_override_font_sizes/normal_font_size = 27
 text = "Turpināt"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D" unique_id=1628820568]
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_8asym")
+
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]

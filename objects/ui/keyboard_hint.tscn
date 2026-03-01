@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dlqlsdw3rtqp2"]
+
+[ext_resource type="Texture2D" uid="uid://bykse8sra3ec3" path="res://sprites/ui/keyboard_hints/Keyboard Letters and Symbols.png" id="1_74pdb"]
+[ext_resource type="Theme" uid="uid://x068ww5u7oqj" path="res://themes/button.tres" id="2_sp6ft"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sp6ft"]
+atlas = ExtResource("1_74pdb")
+region = Rect2(65, 34, 13, 12)
+
+[node name="KeyboardHint" type="Control" unique_id=1997915635]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BoxContainer" type="BoxContainer" parent="." unique_id=1877161790]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BoxContainer" unique_id=285933797]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="BoxContainer/HBoxContainer" unique_id=2001200306]
+custom_minimum_size = Vector2(80.205, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_sp6ft")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BoxContainer/HBoxContainer" unique_id=1186598141]
+custom_minimum_size = Vector2(310.78, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = ExtResource("2_sp6ft")
+theme_override_font_sizes/normal_font_size = 64
+text = "Uzzināt"
+fit_content = true
+vertical_alignment = 1

@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://baoi50bojrghs"]
+
+[ext_resource type="Texture2D" uid="uid://c7s7dnapvfvha" path="res://sprites/ui/menu_screen/image 5.png" id="1_0ad5b"]
+[ext_resource type="Script" uid="uid://xel6p16wgrt6" path="res://scripts/ui/main_menu/MainMenu.cs" id="1_bviqh"]
+[ext_resource type="Theme" uid="uid://chk7bapn4nnkr" path="res://themes/title.tres" id="2_e7tdj"]
+[ext_resource type="Texture2D" uid="uid://gtredrijfskg" path="res://sprites/ui/menu_screen/Sprite-0002.png" id="3_nj1tm"]
+[ext_resource type="Theme" uid="uid://854vxbqn1rqn" path="res://themes/button_real.tres" id="5_8c2eu"]
+
+[node name="MainMenuScreen" type="Control" unique_id=1331638491]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bviqh")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=504408140]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_0ad5b")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1715178478]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 110
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1813377327]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1149316497]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme = ExtResource("2_e7tdj")
+theme_override_font_sizes/normal_font_size = 345
+text = "EKSKURSIJA AP
+LIEPĀJU"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BoxContainer" type="BoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2081370077]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/BoxContainer" unique_id=305354394]
+custom_minimum_size = Vector2(958, 479)
+layout_mode = 2
+texture = ExtResource("3_nj1tm")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/BoxContainer/TextureRect" unique_id=1620895307]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 45
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 45
+theme_override_constants/margin_bottom = 60
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/BoxContainer/TextureRect/MarginContainer" unique_id=98882207]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/BoxContainer/TextureRect/MarginContainer/VBoxContainer" unique_id=1531190301]
+layout_mode = 2
+theme = ExtResource("5_8c2eu")
+theme_override_font_sizes/font_size = 90
+text = "Sākt spēli"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/BoxContainer/TextureRect/MarginContainer/VBoxContainer" unique_id=44896119]
+layout_mode = 2
+theme = ExtResource("5_8c2eu")
+theme_override_font_sizes/font_size = 90
+text = "Par spēli"
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/BoxContainer/TextureRect/MarginContainer/VBoxContainer" unique_id=1298860743]
+layout_mode = 2
+theme = ExtResource("5_8c2eu")
+theme_override_font_sizes/font_size = 90
+text = "Iziet"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BoxContainer/TextureRect/MarginContainer/VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BoxContainer/TextureRect/MarginContainer/VBoxContainer/Button2" to="." method="_on_about_us_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BoxContainer/TextureRect/MarginContainer/VBoxContainer/Button3" to="." method="_on_exit_pressed"]

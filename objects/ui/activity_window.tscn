@@ -1,0 +1,181 @@
+[gd_scene format=3 uid="uid://ckaxbrkl4lwp"]
+
+[ext_resource type="Script" uid="uid://en63abwq7bo7" path="res://scripts/ui/game_screen/activity/ActivityWindow.cs" id="1_m1u6k"]
+[ext_resource type="Texture2D" uid="uid://c314vnxkwfjyq" path="res://sprites/ui/activity/Sprite-0005.png" id="1_t54v8"]
+[ext_resource type="Theme" uid="uid://chk7bapn4nnkr" path="res://themes/title.tres" id="2_x8kpu"]
+[ext_resource type="Theme" uid="uid://x068ww5u7oqj" path="res://themes/button.tres" id="3_2mwqf"]
+[ext_resource type="Theme" uid="uid://854vxbqn1rqn" path="res://themes/button_real.tres" id="4_lm7lh"]
+[ext_resource type="PackedScene" uid="uid://3cb0utommagt" path="res://objects/ui/quiz_window.tscn" id="5_quizwindow"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_t54v8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lm7lh"]
+bg_color = Color(0.65882355, 0.8745098, 0.5568628, 1)
+
+[node name="ActivityWindow" type="Control" unique_id=63967447]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m1u6k")
+
+[node name="Panel" type="Panel" parent="." unique_id=603811613]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=642997227]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.1
+anchor_right = 0.7
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer" unique_id=1033801678]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("1_t54v8")
+
+[node name="BoxContainer" type="BoxContainer" parent="MarginContainer" unique_id=54352422]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/BoxContainer" unique_id=1055428842]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/BoxContainer/MarginContainer" unique_id=1435085826]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 30
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/BoxContainer/MarginContainer/VBoxContainer" unique_id=2102670077]
+custom_minimum_size = Vector2(0, 450)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+mouse_filter = 2
+texture = SubResource("PlaceholderTexture2D_t54v8")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/BoxContainer/MarginContainer/VBoxContainer" unique_id=952945112]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = -8
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/BoxContainer/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1223380826]
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("2_x8kpu")
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/normal_font_size = 64
+text = " Name"
+fit_content = true
+tab_size = 6
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/BoxContainer/MarginContainer/VBoxContainer/VBoxContainer" unique_id=493252277]
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("3_2mwqf")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 32
+text = " Adress"
+fit_content = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/BoxContainer/MarginContainer/VBoxContainer" unique_id=1800044894]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/BoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=316497265]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/BoxContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=338547073]
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("2_x8kpu")
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/normal_font_size = 64
+text = "Apraksts"
+fit_content = true
+tab_size = 6
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/BoxContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=220599943]
+layout_mode = 2
+theme = ExtResource("3_2mwqf")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Amet consectetur adipiscing elit quisque faucibus ex sapien. Quisque faucibus ex sapien vitae pellentesque sem placerat. Vitae pellentesque sem placerat in id cursus mi.
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Amet consectetur adipiscing elit quisque faucibus ex sapien. Quisque faucibus ex sapien vitae pellentesque sem placerat. Vitae pellentesque sem placerat in id cursus mi."
+fit_content = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/BoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=297644876]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/BoxContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=443527648]
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("2_x8kpu")
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/normal_font_size = 64
+text = "Fakti"
+fit_content = true
+tab_size = 6
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/BoxContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1335013013]
+layout_mode = 2
+theme = ExtResource("3_2mwqf")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Amet consectetur adipiscing elit quisque faucibus ex sapien. Quisque faucibus ex sapien vitae pellentesque sem placerat. Vitae pellentesque sem placerat in id cursus mi.
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Amet consectetur adipiscing elit quisque faucibus ex sapien. Quisque faucibus ex sapien vitae pellentesque sem placerat. Vitae pellentesque sem placerat in id cursus mi."
+fit_content = true
+
+[node name="BoxContainer" type="BoxContainer" parent="MarginContainer/BoxContainer/MarginContainer/VBoxContainer" unique_id=1654784444]
+layout_mode = 2
+size_flags_vertical = 10
+mouse_filter = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/BoxContainer/MarginContainer/VBoxContainer/BoxContainer" unique_id=1530060394]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme = ExtResource("4_lm7lh")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_lm7lh")
+text = "Quiz"
+
+[node name="QuizWindow" parent="." unique_id=937450474 instance=ExtResource("5_quizwindow")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="MarginContainer/BoxContainer/MarginContainer/VBoxContainer/BoxContainer/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://c6ja1ld8t4xm1"]
+
+[ext_resource type="Script" uid="uid://dk2156gqblncc" path="res://scripts/ui/game_screen/GameScreen.cs" id="1_rxmqw"]
+[ext_resource type="PackedScene" uid="uid://ps2c0jyg8k6l" path="res://objects/character/player.tscn" id="2_3uriw"]
+[ext_resource type="PackedScene" uid="uid://ckaxbrkl4lwp" path="res://objects/ui/activity_window.tscn" id="2_85ytm"]
+[ext_resource type="PackedScene" uid="uid://dxksu5ktoc0io" path="res://objects/ui/clippy.tscn" id="4_dv2sx"]
+[ext_resource type="PackedScene" uid="uid://dlqlsdw3rtqp2" path="res://objects/ui/keyboard_hint.tscn" id="6_1urxi"]
+
+[sub_resource type="Animation" id="Animation_dv2sx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/CharacterBody2D/Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_rxmqw"]
+resource_name = "zoom_in"
+length = 2.0
+step = 0.008333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/CharacterBody2D/Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.0000002),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(1.5, 1.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1urxi"]
+_data = {
+&"RESET": SubResource("Animation_dv2sx"),
+&"zoom_in": SubResource("Animation_rxmqw")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3uriw"]
+size = Vector2(479, 271)
+
+[node name="Node" type="Node" unique_id=174055412]
+script = ExtResource("1_rxmqw")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1820196170]
+
+[node name="CharacterBody2D" parent="Node2D" unique_id=1276097413 instance=ExtResource("2_3uriw")]
+position = Vector2(1280, 720)
+scale = Vector2(10, 10)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Node2D/CharacterBody2D" unique_id=1102393766]
+
+[node name="ActivityWindow" parent="Node2D/CharacterBody2D/CanvasLayer" unique_id=63967447 instance=ExtResource("2_85ytm")]
+visible = false
+
+[node name="Clippy" parent="Node2D/CharacterBody2D/CanvasLayer" unique_id=360962239 instance=ExtResource("4_dv2sx")]
+
+[node name="KeyboardHint" parent="Node2D/CharacterBody2D/CanvasLayer" unique_id=1997915635 instance=ExtResource("6_1urxi")]
+visible = false
+offset_left = 12.125
+offset_top = -166.0
+offset_right = 12.125
+offset_bottom = -166.0
+
+[node name="Camera2D" type="Camera2D" parent="Node2D/CharacterBody2D" unique_id=29175721]
+scale = Vector2(0.9999998, 0.9999998)
+zoom = Vector2(0.5, 0.5)
+limit_smoothed = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/CharacterBody2D" unique_id=1306600815]
+root_node = NodePath("../../..")
+libraries/ = SubResource("AnimationLibrary_1urxi")
+
+[node name="Liepaja_Castle" type="Area2D" parent="Node2D" unique_id=261101203]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Liepaja_Castle" unique_id=1382413551]
+position = Vector2(751, 745)
+shape = SubResource("RectangleShape2D_3uriw")
